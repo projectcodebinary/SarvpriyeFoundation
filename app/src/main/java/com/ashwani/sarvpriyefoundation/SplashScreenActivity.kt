@@ -9,7 +9,7 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 
-class Main2Activity : AppCompatActivity() {
+class SplashScreenActivity : AppCompatActivity() {
 
     internal var pStatus = 0
     private val handler = Handler()
@@ -33,7 +33,7 @@ class Main2Activity : AppCompatActivity() {
                 handler.post {
                     mProgress.progress = pStatus
                     if (mProgress.progress == mProgress.max)
-                        startActivity(Intent(this@Main2Activity, MainActivity::class.java))
+                        startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
 
 
                 }
