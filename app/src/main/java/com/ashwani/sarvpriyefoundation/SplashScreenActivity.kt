@@ -9,14 +9,14 @@ import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 
-class Main2Activity : AppCompatActivity() {
-
+class SplashScreenActivity : AppCompatActivity() {
     internal var pStatus = 0
     private val handler = Handler()
     internal lateinit var tv: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splashscreen)
+        setContentView(R.layout.activity_splash_screen)
+
 
         val drawable = ContextCompat.getDrawable(this, R.drawable.circular)
         val mProgress = findViewById<View>(R.id.circularProgressbar) as ProgressBar
@@ -33,9 +33,7 @@ class Main2Activity : AppCompatActivity() {
                 handler.post {
                     mProgress.progress = pStatus
                     if (mProgress.progress == mProgress.max)
-                        startActivity(Intent(this@Main2Activity, MainActivity::class.java))
-
-
+                        startActivity(Intent(this, MainActivity::class.java))
                 }
                 try {
                     Thread.sleep(16)
