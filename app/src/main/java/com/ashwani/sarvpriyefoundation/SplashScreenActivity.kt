@@ -16,7 +16,7 @@ class Main2Activity : AppCompatActivity() {
     internal lateinit var tv: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main2)
+        setContentView(R.layout.activity_splashscreen)
 
         val drawable = ContextCompat.getDrawable(this, R.drawable.circular)
         val mProgress = findViewById<View>(R.id.circularProgressbar) as ProgressBar
