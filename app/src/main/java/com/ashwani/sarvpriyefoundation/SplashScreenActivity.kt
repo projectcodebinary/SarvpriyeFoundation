@@ -10,10 +10,6 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 
 class SplashScreenActivity : AppCompatActivity() {
-<<<<<<< HEAD
-=======
-
->>>>>>> 3586ea2b2f9eeccf349a4325eabdb5ca0768032a
     internal var pStatus = 0
     private val handler = Handler()
     internal lateinit var tv: TextView
@@ -36,14 +32,10 @@ class SplashScreenActivity : AppCompatActivity() {
 
                 handler.post {
                     mProgress.progress = pStatus
-                    if (mProgress.progress == mProgress.max)
-<<<<<<< HEAD
-                        startActivity(Intent(this, MainActivity::class.java))
-=======
+                    if (mProgress.progress == mProgress.max) {
+                       // startActivity(Intent(this, MainActivity::class.java))
                         startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
-
-
->>>>>>> 3586ea2b2f9eeccf349a4325eabdb5ca0768032a
+                    }
                 }
                 try {
                     Thread.sleep(16)
